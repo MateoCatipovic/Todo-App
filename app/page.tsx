@@ -1,6 +1,7 @@
 import { getAllTodos } from "@/api";
 import AddTask from "./components/AddTask";
 import TodoList from "./components/TodoList";
+import SignIn from "./components/SignIn";
 
 
 export default async function Home() {
@@ -8,15 +9,23 @@ export default async function Home() {
   const tasks = await getAllTodos();
   console.log(tasks);
   
-  return ( 
+ 
+
+  return (
     <main className="max-w-4xl mx-auto mt-4">
-        <div className="text-center my-5 flex flex-col gap-4">
+      <div className="text-center my-5 flex flex-col  gap-4">
+
+          <div className=" flex justify-end">
+          <SignIn  />
+          </div>
           <h1 className="text-2xl font-bold">Todo List App</h1>
           <AddTask/>
         </div>
         {/* sending data in todo list */}
         <TodoList tasks = {tasks}/>
+
         
     </main>
-  )
-}
+  );
+
+  };
