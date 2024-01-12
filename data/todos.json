@@ -1,14 +1,6 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "text": "buy milk"
-    },
-    {
-      "id": "2",
-      "text": "cut grass 4"
-    },
-    {
       "id": "4",
       "text": "kiss girlfriend"
     },
@@ -18,11 +10,15 @@
     },
     {
       "id": "4bee1b01-1175-43d8-91d5-8afe7abe4cfe",
-      "text": "dddddd"
+      "text": "00012345"
     },
     {
       "id": "6c8cd10d-5fbd-489d-b000-2f02df8d9692",
-      "text": "clean room 2"
+      "text": "clean room "
+    },
+    {
+      "id": "6dc469cd-00ec-4537-a9a1-553029d37ffc",
+      "text": "poli"
     }
   ]
 }

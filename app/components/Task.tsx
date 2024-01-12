@@ -21,16 +21,25 @@ const Task: React.FC<TaskProps> = ({ task }) => {
 
   const handleSubmitEditTodo: FormEventHandler<HTMLFormElement> = async (e) => {
     //we use preventDefault to manually handle submit.
+    console.log("submit1");
     e.preventDefault();
     await editTodo({
       id: task.id,
       text: taskToEdit,
     });
+    console.log("submit2");
     //closing module after submiting newTask
     setopenModalEdit(false);
     //refreshing router to get new updated Tasks list
     router.refresh();
   };
+
+  // const handleKeyDown = (e) => {
+  //   if (e.key === 'Enter') {
+  //     e.preventDefault();
+  //     handleSubmitEditTodo(e);
+  //   }
+  // };
 
   const handleSubmitDeleteTodo = async (id: string) => {
     await deleteTodo(id);
@@ -52,10 +61,14 @@ const Task: React.FC<TaskProps> = ({ task }) => {
           <form onSubmit={handleSubmitEditTodo}>
             <h3 className="font-bold text-lg">Edit task</h3>
             <button
+              //  ako imamo više botuna unutar FORME bitno ih je specifirati (type="button")
+              //  ako nam nisu  botun koji submita FORMU ili (type="submit")
+              //  kako bi pritiskom tipke Enter mogli submitat formu i da ne koristimo botun sa (type="submit")
+
+              type="button"
               onClick={(e) => {
                 e.preventDefault();
                 setopenModalEdit(false);
-                
               }}
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
             >
@@ -66,6 +79,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
               <input
                 value={taskToEdit}
                 onChange={(e) => setTaskToEdit(e.target.value)}
+                // onKeyDown={handleKeyDown}
                 type="text"
                 placeholder="Type here"
                 className="input input-bordered w-full"
