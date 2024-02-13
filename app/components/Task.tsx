@@ -2,7 +2,6 @@
 import { ITask } from "@/types/tasks";
 import { CiEdit } from "react-icons/ci";
 import { GoTrash } from "react-icons/go";
-import { FiTrash2 } from "react-icons/fi";
 import Modal from "./Modal";
 import { FormEventHandler, use, useState } from "react";
 import { useRouter } from "next/navigation";

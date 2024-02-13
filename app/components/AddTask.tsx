@@ -5,11 +5,13 @@ import { FormEventHandler, useState } from "react";
 import { addTodo } from "@/api";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
+import { useSession } from "next-auth/react";
 
 const AddTask = () => {
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [newTaskValue, setNewTaskValue] = useState<string>("");
+  const { data: session } = useSession();
 
   const handleSubmitNewTodo: FormEventHandler<HTMLFormElement> = async (e) => {
     //we use preventDefault to manually handle submit.
@@ -25,6 +27,10 @@ const AddTask = () => {
     //refreshing router to get new updated Tasks list
     router.refresh();
   };
+
+  if(!session){
+    return<></>
+  }
 
   return (
     <div>

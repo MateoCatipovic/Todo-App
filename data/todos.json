@@ -1,16 +1,8 @@
 {
   "tasks": [
     {
-      "id": "4",
-      "text": "kiss girlfriend"
-    },
-    {
       "id": "3",
       "text": "I love u Mirjam"
-    },
-    {
-      "id": "4bee1b01-1175-43d8-91d5-8afe7abe4cfe",
-      "text": "00012345"
     },
     {
       "id": "6c8cd10d-5fbd-489d-b000-2f02df8d9692",
@@ -19,6 +11,18 @@
     {
       "id": "6dc469cd-00ec-4537-a9a1-553029d37ffc",
       "text": "poli"
+    },
+    {
+      "id": "123cf60c-3343-4861-9c45-c8e2915d70ff",
+      "text": "123"
+    },
+    {
+      "id": "f1a15125-624e-4809-ae06-d8d744a2ebf6",
+      "text": "456"
+    },
+    {
+      "id": "ad43afc0-5ca9-4342-9939-cf3b88432a5e",
+      "text": "lol123"
     }
   ]
 }
